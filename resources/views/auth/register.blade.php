@@ -6,34 +6,34 @@
 <h1>Register</h1>
 
 <form method="POST" action="{{ route('register') }}">
-    @csrf
+  @csrf
 
-    <label>Name</label>
-    <input class="@error('name') error-border @enderror" type="text" name="name" value="{{ old('name') }}">
-    @error('name')
+  <label>Name</label>
+  <input class="@error('name') error-border @enderror" type="text" name="name" value="{{ old('name') }}">
+  @error('name')
     <div class="error">
-        {{ $message }}
+      {{ $message }}
     </div>
-    @enderror
+  @enderror
 
-    <label>Email</label>
-    <input class="@error('email') error-border @enderror" type="text" name="email" value="{{ old('email') }}">
-    @error('email')
+  <label>Email</label>
+  <input class="@error('email') error-border @enderror" type="text" name="email" value="{{ old('email') }}">
+  @error('email')
     <div class="error">
-        {{ $message }}
+      {{ $message }}
     </div>
-    @enderror
+  @enderror
 
-    <label>Password</label>
-    <input class="@error('password') error-border @enderror" type="password" name="password">
-    @error('password')
+  <label>Password</label>
+  <input class="@error('password') error-border @enderror" type="password" name="password">
+  @error('password')
     <div class="error">
-        {{ $message }}
+      {{ $message }}
     </div>
-    @enderror
+  @enderror
 
-    <button type="submit">Register</button>
+  <button type="submit">Register</button>
 
-    If you already have an account <a href="{{ route('login') }}">login</a>.
+  If you already have an account <a href="{{ route('login') }}">login</a>.
 </form>
 @endsection
