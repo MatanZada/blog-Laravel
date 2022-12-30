@@ -16,3 +16,15 @@ class Post extends Model
         return $this->belongsTo(User::class);
     }
 }
+
+class User extends Model
+{
+    use HasFactory;
+    protected $fillable = ['name', 'email'];
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+        // return $this->belongsToMany(Post::class);
+    }
+}
